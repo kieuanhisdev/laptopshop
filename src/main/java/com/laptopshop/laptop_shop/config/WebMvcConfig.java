@@ -22,17 +22,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return bean;
     }
 
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.viewResolver(viewResolver());
-    }
+    // @Override
+    // public void configureViewResolvers(ViewResolverRegistry registry) {
+    // registry.viewResolver(viewResolver());
+    // }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");
         registry.addResourceHandler("/js/**").addResourceLocations("/resources/js/");
         registry.addResourceHandler("/images/**").addResourceLocations("/resources/images/");
-        registry.addResourceHandler("/admin/**").addResourceLocations("/resources/admin/");
-
+        registry.addResourceHandler("/client/**").addResourceLocations("/resources/client/");
     }
 }
